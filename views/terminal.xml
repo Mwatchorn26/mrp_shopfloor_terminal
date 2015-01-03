@@ -2,35 +2,48 @@
 <openerp>
     <data>
  		<!-- file: mrp_shopfloor_terminal/view/terminal.xml-->
+ <!--		<template id="terminal_home" name="Terminal Home Screen">
+ 			NEW HOME
+ 		</template>
+-->
 		<template id="terminal_home" name="Terminal Home Screen">
-		    <t t-call="website.layout">
+		    <!-- <t t-call="website.layout">-->
 		        <div class="row">
-		        	<form role="form" t-attf-action="/terminal/{{ slug(user) }}/details/" method="POST">            
+		        	<!--<form role="form" t-attf-action="/terminal/{{ slug(user) }}/details/" method="POST">-->            
 		             	<input id="user_id"></input>
+		             	<br/>
 		             	<button type="submit" class="btn btn-primary mt8">Login</button>
-		        	</form>
+		        	<!--</form>-->
 		        </div>
-		    </t>
+		    <!--</t>-->
 		</template>
-		<template id="terminal_home" name="Terminal Home Screen">
-		    <t t-call="website.layout">
-		        <div class="row">
+		<template id="terminal_details" name="Operator Details">
+		    <!-- <t t-call="website.layout"> -->
+		      
+			<section class="oe_container oe_dark">
+    			<div class="oe_row oe_spaced">
+ 
 		        	<!--<span t-field="user_id.image_small" t-field-options="{&quot;widget&quot;: &quot;image&quot;, &quot;class&quot;: &quot;img-rounded&quot;}"/>-->
 		        	<span>User's Picture</span>      	
 					<span>Status: Signed IN/OUT</span>
 					<span>Home (Link)</span>	        	
 				</div>
-				<div class="row">
+			</section>
+			<section class="oe_container">
+				<div class="oe_row oe_spaced">
 					Logged in to Job ABC<br/>					
 					.....Material #1 for Job ABC<br/>
 					.....Material #2 for Job ABC<br/>
 				</div>
-				<div class="row">
+			</section>
+			<section class="oe_container oe_dark">
+				<div class="oe_row">
 					Logged in to Job XYZ<br/>					
 					.....Material #1 for Job XYZ<br/>
 					.....Material #2 for Job XYZ<br/>
 				</div>
-			</t>
+			</section>
+			<!-- </t> -->
 		</template>
     </data>
 </openerp>
